@@ -9,7 +9,8 @@ app.get('/api', (req, res) => {
     const track = "backend";
     
     const currentDay = new Date().toLocaleDateString('en-US', { weekday: 'long' });
-    const utcTime = new Date().toISOString();
+    const utcTime = new Date().toISOString().split('.')[0] + "Z";
+    //const utcTime = new Date().toISOString();
   
     const githubFileUrl = 'https://github.com/Demmy100/hng_stage_one/tree/main'; // Replace with your actual file URL
     const githubRepoUrl = 'https://github.com/Demmy100?tab=repositories'; // Replace with your actual repo URL
